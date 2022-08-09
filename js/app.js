@@ -35,7 +35,7 @@ function leerDatosCurso(curso) {
         precio: curso.querySelector('.precio span').textContent,
         id: curso.querySelector('a').getAttribute('data-id'),
         cantidad: 1
-    }
+    };
     
     console.log(infoCurso);
 
