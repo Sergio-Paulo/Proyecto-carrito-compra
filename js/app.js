@@ -49,7 +49,12 @@ function leerDatosCurso(curso) {
 // Muestra el carrito de compras en el HTML
 
 function carritoHTML() {
+
+    // Limpiar HTML
+    limpiarHTML();
+
     articulosCarrito.forEach ( (curso) => {
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
@@ -60,3 +65,12 @@ function carritoHTML() {
         contenedorCarrito.appendChild(row);
     });
 };
+
+//Elimina los cursos del tbody
+function limpiarHTML() {
+    contenedorCarrito.innerHTML = '';
+
+    // while (contenedorCarrito.firstChild) {
+    //     contenedorCarrito.remove(contenedorCarrito.firstChild);
+    // }
+}
