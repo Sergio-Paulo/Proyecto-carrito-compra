@@ -31,7 +31,7 @@ function agregarCurso(evento) {
 // Elimina elemntos del carrito
 
 function eliminarCurso(evento) {
-    //console.log(evento.target.classList);
+    
     if(evento.target.classList.contains('borrar-curso')){
         const cursoId = evento.target.getAttribute('data-id');
 
