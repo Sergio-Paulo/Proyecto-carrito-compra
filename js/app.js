@@ -68,20 +68,8 @@ function carritoHTML() {
 
 //Elimina los cursos del tbody
 
-// function limpiarHTML() {
-//     contenedorCarrito.innerHTML = '';
-
-//     // while (contenedorCarrito.firstChild) {
-//     //     contenedorCarrito.remove(contenedorCarrito.firstChild);
-//     // }
-// }
-
 function limpiarHTML() {
-    // forma lenta
-    // contenedorCarrito.innerHTML = '';
-
-
-    // forma rapida (recomendada)
+    
     while(contenedorCarrito.firstChild) {
          contenedorCarrito.removeChild(contenedorCarrito.firstChild);
      }
