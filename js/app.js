@@ -52,13 +52,19 @@ function carritoHTML() {
 
     // Limpiar HTML
     limpiarHTML();
-
+    //Recorre el carrito y genera el HTML
     articulosCarrito.forEach ( (curso) => {
 
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>
-                ${curso.titulo}
+                <img src ='${curso.imagen}' width ="100">
+            </td>
+            <td>${curso.titulo}</td>
+            <td>${curso.precio}</td>
+            <td>${curso.cantidad}</td>
+            <td>
+                <a href ="#" class="borrar-curso" data-id="${curso.id}"> X </a>
             </td>        
         `;
         // Agregar el HTML del carrito en tbody
@@ -69,7 +75,7 @@ function carritoHTML() {
 //Elimina los cursos del tbody
 
 function limpiarHTML() {
-    
+
     while(contenedorCarrito.firstChild) {
          contenedorCarrito.removeChild(contenedorCarrito.firstChild);
      }
