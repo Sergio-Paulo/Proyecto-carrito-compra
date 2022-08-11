@@ -39,20 +39,20 @@ function agregarCurso(evento) {
 
 function eliminarCurso(evento) {
     
+    evento.preventDefault();
     if(evento.target.classList.contains('borrar-curso')){
         const cursoId = evento.target.getAttribute('data-id');
 
         // Elimina del arreglo articulosCarrito por el Id
         articulosCarrito = articulosCarrito.filter( curso => curso.id !== cursoId)
 
-        console.log(articulosCarrito);
+        carritoHTML();
     }
 }
 
 // Lee el contenido HTML al que le damos click y lo usa en el carrito
 
 function leerDatosCurso(curso) {
-    //console.log(curso);
 
     // crear un objeto con el contenido del curso actual
     const infoCurso = {
@@ -81,12 +81,7 @@ function leerDatosCurso(curso) {
     } else {
         articulosCarrito = [...articulosCarrito, infoCurso];
     }
-
-
-    //Agregar elemento al arreglo vacio (articulosCarrito)
-   //articulosCarrito = [...articulosCarrito, infoCurso];
-
-    console.log(articulosCarrito);
+    
     carritoHTML();
 
 }
@@ -117,7 +112,7 @@ function carritoHTML() {
     });
 };
 
-//Elimina los cursos del tbody
+//Elimina elementos del tbody
 
 function limpiarHTML() {
 
