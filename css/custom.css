@@ -153,6 +153,20 @@ ul {
         text-align: left;
     }
 }
+
+.card {
+    transition: box-shadow 0.3s ease;
+    background-color: #fff;
+    margin: 1rem 0;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0;
+    cursor: pointer;
+}
+
+
+.card:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(0,0,0,0.3);
+}
 .info-card  {
     padding: 10px 20px;
 }
@@ -181,4 +195,12 @@ ul {
 display: block;
 margin-bottom: 10px;
 text-decoration: none;
+}
+
+#principal {
+    margin-bottom: 30px;
+}
+
+#secundaria {
+    margin-bottom: 30px;
 }
